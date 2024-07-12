@@ -10,7 +10,7 @@ namespace EntityLayer.Concrete
     public class Author
     {
         [Key]
-        public int ID { get; set; }
+        public int AuthorID { get; set; }
         public string Name { get; set; }
         public string About { get; set; }
         public string Image { get; set; }
