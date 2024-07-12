@@ -11,11 +11,11 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int AuthorID { get; set; }
-        public string Name { get; set; }
-        public string About { get; set; }
-        public string Image { get; set; }
-        public string Mail { get; set; }
-        public string Password { get; set; }
-        public bool Status { get; set; }
+        public string AuthorName { get; set; }
+        public string AuthorAbout { get; set; }
+        public string AuthorImage { get; set; }
+        public string AuthorMail { get; set; }
+        public string AuthorPassword { get; set; }
+        public bool AuthorStatus { get; set; }
     }
 }

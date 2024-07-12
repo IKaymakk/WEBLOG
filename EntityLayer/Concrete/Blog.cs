@@ -11,13 +11,14 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int BlogID { get; set; }
-        public string Title { get; set; }
-        public string Content { get; set; }
-        public string ThumbnailImage { get; set; }
-        public string Image { get; set; }
-        public DateTime Date { get; set; }
-        public bool Statu { get; set; }
+        public string BlogTitle { get; set; }
+        public string BlogContent { get; set; }
+        public string BlogThumbnailImage { get; set; }
+        public string BlogImage { get; set; }
+        public DateTime BlogDate { get; set; }
+        public bool BlogStatus { get; set; }
+        public Category Category { get; set; }
         public int CategoryID { get; set; }
-        public Category Category{ get; set; }
+        public List<Comment> Comment { get; set; }
     }
 }

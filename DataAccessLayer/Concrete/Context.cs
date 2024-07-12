@@ -12,7 +12,7 @@ namespace DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=KAYMAK\\SQLEXPRESS;database=DbWEBLOG; integrated security=true;");
+            optionsBuilder.UseSqlServer("server=KAYMAK\\SQLEXPRESS;database=WeblogDb; integrated security=true;");
         }
         public DbSet<About> Abouts { get; set; }
         public DbSet<Author> Authors { get; set; }
