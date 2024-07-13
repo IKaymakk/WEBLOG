@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,12 +24,17 @@ namespace DataAccessLayer.Concrete
             c.SaveChanges();
         }
 
-        public T GetByID(int id)
+        public T GetByID(Expression<Func<T, bool>> filter)
         {
-            return _object.Find(id);
-        }
+			return _object.SingleOrDefault(filter);
+		}
 
-        public List<T> GetList()
+		public List<T> GetList(Expression<Func<T, bool>> filter)
+		{
+            return c.Set<T>().Where(filter).ToList();
+		}
+
+		public List<T> GetList()
         {
             return _object.ToList();
         }

@@ -4,6 +4,7 @@ using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,6 +34,11 @@ namespace BusinessLayer.Concrete
             return _iblogdal.GetList();
         }
 
+        public List<Blog> BlogListWCategory()
+        {
+            return _iblogdal.BlogListWithCategory();
+        }
+
         public void BlogUpdate(Blog blog)
         {
             _iblogdal.Update(blog);
@@ -40,7 +46,9 @@ namespace BusinessLayer.Concrete
 
         public Blog GetByID(int id)
         {
-            return _iblogdal.GetByID(id);
+            return _iblogdal.GetByID(x => x.BlogID == id);
         }
-    }
+
+		
+	}
 }
