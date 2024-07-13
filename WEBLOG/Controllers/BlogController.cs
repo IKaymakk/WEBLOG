@@ -18,7 +18,8 @@ namespace WEBLOG.Controllers
 		}
 		public IActionResult BlogDetail(int id)
 		{
-			var values = bm.GetByID(id);
+			ViewBag.BlogID = id;
+			var values = bm.BlogList(id);
 			return View(values);
 		}
 	}

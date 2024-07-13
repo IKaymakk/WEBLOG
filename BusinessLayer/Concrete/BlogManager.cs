@@ -34,6 +34,11 @@ namespace BusinessLayer.Concrete
             return _iblogdal.GetList();
         }
 
+        public List<Blog> BlogList(int id)
+        {
+            return _iblogdal.GetList(x=>x.BlogID == id);
+        }
+
         public List<Blog> BlogListWCategory()
         {
             return _iblogdal.BlogListWithCategory();
@@ -44,11 +49,12 @@ namespace BusinessLayer.Concrete
             _iblogdal.Update(blog);
         }
 
+
         public Blog GetByID(int id)
         {
             return _iblogdal.GetByID(x => x.BlogID == id);
         }
 
-		
-	}
+
+    }
 }
