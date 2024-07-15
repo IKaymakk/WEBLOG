@@ -1,15 +1,25 @@
 ﻿@using EntityLayer.Concrete
 @model List<Comment>
-@foreach (var x in Model)
+@if (Model.Count() == 0)
 {
-    <div class="media">
-        <img src="~/Theme/web/images/t1.jpg" alt="" class="img-fluid" />
-        <div class="media-body">
-            <h5 class="mt-0">@x.CommentUserName</h5>
-            <p>
-                @x.CommentContent
-            </p>
+    <br />
+    <h4>Henüz yorum yapılmamış...</h4>
+    <br />
+}
+else
+{
+    @foreach (var x in Model)
+    {
+        <div class="media">
+            <img src="~/Theme/web/images/t1.jpg" alt="" class="img-fluid" />
+            <div class="media-body">
+                <h5 class="mt-0">@x.CommentUserName</h5>
+                <p>
+                    @x.CommentContent
+                </p>
+            </div>
         </div>
-    </div>
+    }
+
 }
 

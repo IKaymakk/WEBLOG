@@ -39,7 +39,12 @@ namespace BusinessLayer.Concrete
             return _iblogdal.GetList(x=>x.BlogID == id);
         }
 
-        public List<Blog> BlogListWCategory()
+		public List<Blog> BlogListAuthorID(int id)
+		{
+            return _iblogdal.GetList(x => x.AuthorID == id);
+		}
+
+		public List<Blog> BlogListWCategory()
         {
             return _iblogdal.BlogListWithCategory();
         }
