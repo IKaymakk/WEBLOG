@@ -3,10 +3,12 @@ using BusinessLayer.ValidationRules;
 using DataAccessLayer.Concrete.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WEBLOG.Controllers
 {
+    [AllowAnonymous]
     public class RegisterController : Controller
     {
         AuthorManager am = new AuthorManager(new EfAuthorRepository());

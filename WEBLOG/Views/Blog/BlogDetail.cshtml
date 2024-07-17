@@ -68,29 +68,34 @@
                     <!--right-->
                     <aside class="col-lg-4 agileits-w3ls-right-blog-con text-right">
                         <div class="right-blog-info text-left">
+                            <div class="tech-btm">
+                                <img src="~/Theme/web/images/banner1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <h4>Bültene Abone Ol!</h4>
+
                             <partial name="~/Views/NewsLatter/SubscribeMail.cshtml">
 
-                            @await Component.InvokeAsync("authorLastBlog")
+                                @await Component.InvokeAsync("authorLastBlog")
 
-                            @await Component.InvokeAsync("CategoryList")
+                                @await Component.InvokeAsync("CategoryList")
 
-                            <div class="single-gd tech-btm">
-                                <h4>Son Yüklenen Blog</h4>
-                                <div class="blog-grids">
-                                    <div class="blog-grid-left">
-                                        <a href="single.html">
-                                            <img src="~/Theme/web/images/b1.jpg" class="img-fluid" alt="">
-                                        </a>
+                                <div class="single-gd tech-btm">
+                                    <h4>Son Yüklenen Blog</h4>
+                                    <div class="blog-grids">
+                                        <div class="blog-grid-left">
+                                            <a href="single.html">
+                                                <img src="~/Theme/web/images/b1.jpg" class="img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="blog-grid-right">
+
+                                            <h5>
+                                                <a href="single.html">Pellentesque dui, non felis. Maecenas male</a>
+                                            </h5>
+                                        </div>
+                                        <div class="clearfix"> </div>
                                     </div>
-                                    <div class="blog-grid-right">
-
-                                        <h5>
-                                            <a href="single.html">Pellentesque dui, non felis. Maecenas male</a>
-                                        </h5>
-                                    </div>
-                                    <div class="clearfix"> </div>
                                 </div>
-                            </div>
                         </div>
 
                     </aside>

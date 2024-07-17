@@ -1,10 +1,12 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.Concrete.EntityFramework;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WEBLOG.Controllers
 {
-	public class BlogController : Controller
+    [AllowAnonymous]
+    public class BlogController : Controller
 	{
 		BlogManager bm = new BlogManager(new EfBlogRepository());
 		public IActionResult Index()

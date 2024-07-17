@@ -28,7 +28,7 @@ namespace BusinessLayer.ValidationRules
                 .Matches(@"[a-z]+").WithMessage("Şifrede en az bir küçük harf olmalıdır.")
                 .Matches(@"[0-9]+").WithMessage("Şifrede en az bir rakam olmalıdır");
 
-
+            RuleFor(x => x.AuthorImage).NotEmpty().WithMessage("Yazara Bir Resim Yolu Girmelisin");
 
         }
     }

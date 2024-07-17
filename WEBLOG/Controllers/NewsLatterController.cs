@@ -1,10 +1,12 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.Concrete.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WEBLOG.Controllers
 {
+    [AllowAnonymous]
     public class NewsLatterController : Controller
     {
         NewsLatterManager manager = new NewsLatterManager(new EfNewsLatterRepository());

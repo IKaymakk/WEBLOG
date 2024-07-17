@@ -1,10 +1,12 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.Concrete.EntityFramework;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WEBLOG.Controllers
 {
-	public class AboutController : Controller
+    [AllowAnonymous]
+    public class AboutController : Controller
 	{
 		AboutManager manager = new AboutManager(new EfAboutRepository());
 		public IActionResult Index()

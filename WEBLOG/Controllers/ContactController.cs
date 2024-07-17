@@ -1,11 +1,13 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.Concrete.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WEBLOG.Controllers
 {
-	public class ContactController : Controller
+    [AllowAnonymous]
+    public class ContactController : Controller
 	{
 		ContactManager cm = new ContactManager(new EfContactRepository());
 
